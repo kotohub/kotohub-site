@@ -1,0 +1,122 @@
+:root {
+  --bg: #fff8ec;
+  --card: #ffffff;
+  --text: #3a2e2a;
+  --muted: #7a6d66;
+  --border: #eadfcf;
+  --accent: #d96a1f;
+  --accent-soft: #fff1e2;
+  --link: #1f6fc4;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1d1916;
+    --card: #27221e;
+    --text: #f2ebe6;
+    --muted: #b8aca4;
+    --border: #3d3530;
+    --accent: #ffa064;
+    --accent-soft: #3a2a1f;
+    --link: #8cc3ff;
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+}
+
+header.site {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+header.site a.brand {
+  font-weight: 800;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+nav.lang a, nav.crumbs a { font-size: 14px; }
+
+h1 { font-size: 1.7rem; line-height: 1.4; margin: 0 0 8px; }
+h2 {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 40px 0 8px;
+  padding-left: 10px;
+  border-left: 5px solid var(--accent);
+}
+h3 { font-size: 1.05rem; margin: 24px 0 4px; }
+
+p, ul, ol, dl { margin: 8px 0; }
+ul, ol { padding-left: 1.4em; }
+li { margin: 4px 0; }
+
+a { color: var(--link); }
+
+.meta { color: var(--muted); font-size: 14px; }
+
+.summary {
+  background: var(--accent-soft);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px 20px;
+  margin: 20px 0;
+}
+.summary ul { margin: 4px 0; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px 20px;
+  margin: 12px 0;
+}
+
+details.faq {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px 16px;
+  margin: 10px 0;
+}
+details.faq summary { font-weight: 700; cursor: pointer; }
+details.faq[open] summary { margin-bottom: 6px; }
+
+.contact {
+  font-size: 1.1rem;
+  font-weight: 700;
+  word-break: break-all;
+}
+
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; margin: 8px 0; font-size: 15px; }
+th, td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; vertical-align: top; }
+th { background: var(--accent-soft); white-space: nowrap; }
+
+hr { border: 0; border-top: 1px solid var(--border); margin: 48px 0 24px; }
+
+footer.site { margin-top: 48px; color: var(--muted); font-size: 14px; }
